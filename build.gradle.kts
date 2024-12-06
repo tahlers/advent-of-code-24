@@ -3,15 +3,17 @@ plugins {
 }
 
 val kotestVersion = "5.9.1"
+val immutablesVersion = "0.3.8"
 
 group = "me.aoc24"
 version = "1.0-SNAPSHOT"
 
-repositories { // Sources of dependencies. See 1️⃣
-    mavenCentral() // Maven Central Repository. See 2️⃣
+repositories {
+    mavenCentral()
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm:$immutablesVersion")
     testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
     testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
 }
