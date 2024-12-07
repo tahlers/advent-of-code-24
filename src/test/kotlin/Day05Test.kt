@@ -55,6 +55,6 @@ class Day05Test : FunSpec({
     test("calculate solution two") {
         val input = this.javaClass.getResource("/day05.txt")!!.readText()
         val result =  Day05.calculateSolutionTwo(input)
-        result shouldBe 0
+        result shouldBe 5346
     }
 })
