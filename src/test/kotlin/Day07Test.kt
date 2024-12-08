@@ -36,6 +36,6 @@ class Day07Test : FunSpec({
     test("calculate solution two") {
         val input = this.javaClass.getResource("/Day07.txt")!!.readText()
         val result = Day07.calculateSolutionTwo(input)
-        result shouldBe 124060392153684L // 1720 too high
+        result shouldBe 124060392153684L
     }
 })
