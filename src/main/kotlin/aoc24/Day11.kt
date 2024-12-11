@@ -24,7 +24,7 @@ object Day11 {
         return when {
             stone == 0L -> {
                 val result = stoneBlinkedTimes(1L, times - 1, memory)
-                memory[stone to times] = result
+                memory[0L to times] = result
                 result
             }
 
@@ -35,7 +35,7 @@ object Day11 {
                 val right = inputString.substring(length / 2, length)
                 val leftResult = stoneBlinkedTimes(left.toLong(), times - 1, memory)
                 val rightResult = stoneBlinkedTimes(right.toLong(), times - 1, memory)
-                memory.put(stone to times, leftResult + rightResult)
+                memory[stone to times] = leftResult + rightResult
                 leftResult + rightResult
             }
 
